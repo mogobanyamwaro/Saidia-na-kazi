@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/providers",
+  "sourceRoot": "libs/backend/providers/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/providers/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/providers"],
+      "options": {
+        "jestConfig": "libs/backend/providers/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

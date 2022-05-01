@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/entities",
+  "sourceRoot": "libs/backend/entities/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/entities/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/entities"],
+      "options": {
+        "jestConfig": "libs/backend/entities/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -14,7 +14,27 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@saidia-na-kazi/backend/auth": ["libs/backend/auth/src/index.ts"],
+      "@saidia-na-kazi/backend/core": ["libs/backend/core/src/index.ts"],
+      "@saidia-na-kazi/backend/decorators": [
+        "libs/backend/decorators/src/index.ts"
+      ],
+      "@saidia-na-kazi/backend/dtos": ["libs/backend/dtos/src/index.ts"],
+      "@saidia-na-kazi/backend/entities": [
+        "libs/backend/entities/src/index.ts"
+      ],
+      "@saidia-na-kazi/backend/enum": ["libs/backend/enum/src/index.ts"],
+      "@saidia-na-kazi/backend/notification": [
+        "libs/backend/notification/src/index.ts"
+      ],
+      "@saidia-na-kazi/backend/providers": [
+        "libs/backend/providers/src/index.ts"
+      ],
+      "@saidia-na-kazi/backend/shared": ["libs/backend/shared/src/index.ts"],
+      "@saidia-na-kazi/backend/sockets": ["libs/backend/sockets/src/index.ts"],
+      "@saidia-na-kazi/backend/users": ["libs/backend/users/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

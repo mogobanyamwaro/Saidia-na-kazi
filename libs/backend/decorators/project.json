@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/decorators",
+  "sourceRoot": "libs/backend/decorators/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/decorators/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/decorators"],
+      "options": {
+        "jestConfig": "libs/backend/decorators/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

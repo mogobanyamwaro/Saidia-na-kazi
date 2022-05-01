@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/sockets",
+  "sourceRoot": "libs/backend/sockets/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/sockets/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/sockets"],
+      "options": {
+        "jestConfig": "libs/backend/sockets/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

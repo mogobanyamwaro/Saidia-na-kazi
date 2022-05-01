@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/enum",
+  "sourceRoot": "libs/backend/enum/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/enum/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/enum"],
+      "options": {
+        "jestConfig": "libs/backend/enum/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

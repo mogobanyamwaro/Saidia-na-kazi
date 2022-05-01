@@ -1,6 +1,17 @@
 {
   "version": 2,
   "projects": {
+    "backend-auth": "libs/backend/auth",
+    "backend-core": "libs/backend/core",
+    "backend-decorators": "libs/backend/decorators",
+    "backend-dtos": "libs/backend/dtos",
+    "backend-entities": "libs/backend/entities",
+    "backend-enum": "libs/backend/enum",
+    "backend-notification": "libs/backend/notification",
+    "backend-providers": "libs/backend/providers",
+    "backend-shared": "libs/backend/shared",
+    "backend-sockets": "libs/backend/sockets",
+    "backend-users": "libs/backend/users",
     "saidia-na-kazi": "apps/saidia-na-kazi"
   }
 }

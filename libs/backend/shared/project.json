@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/shared",
+  "sourceRoot": "libs/backend/shared/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/shared/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/shared"],
+      "options": {
+        "jestConfig": "libs/backend/shared/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
