@@ -1,0 +1,52 @@
+{
+  "root": "apps/saidia-na-kazi",
+  "sourceRoot": "apps/saidia-na-kazi/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/saidia-na-kazi",
+        "main": "apps/saidia-na-kazi/src/main.ts",
+        "tsConfig": "apps/saidia-na-kazi/tsconfig.app.json",
+        "assets": ["apps/saidia-na-kazi/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/saidia-na-kazi/src/environments/environment.ts",
+              "with": "apps/saidia-na-kazi/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "saidia-na-kazi:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/saidia-na-kazi/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/saidia-na-kazi"],
+      "options": {
+        "jestConfig": "apps/saidia-na-kazi/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
