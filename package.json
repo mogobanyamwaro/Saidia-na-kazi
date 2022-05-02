@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@adminjs/typeorm": "^2.0.4",
     "@faker-js/faker": "^6.2.0",
     "@nestjs/common": "^8.0.0",
     "@nestjs/config": "^2.0.0",
@@ -35,7 +36,7 @@
     "rxjs": "^7.0.0",
     "swagger-ui-express": "^4.3.0",
     "tslib": "^2.3.0",
-    "typeorm": "^0.2.44",
+    "typeorm": "^0.3.6",
     "uuid": "^8.3.2",
     "winston": "^3.7.2"
   },

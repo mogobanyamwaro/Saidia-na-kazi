@@ -4,11 +4,16 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  BeforeInsert,
+  PrimaryColumn,
 } from 'typeorm';
+import { v4 } from 'uuid';
 
 @Entity()
 export class BaseEntity extends Base {
-  @PrimaryGeneratedColumn('rowid')
+  @PrimaryColumn('varchar', {
+    length: 50,
+  })
   id: string;
 
   @CreateDateColumn({
@@ -20,4 +25,9 @@ export class BaseEntity extends Base {
     name: 'updated_at',
   })
   updatedAt: Date;
+
+  @BeforeInsert()
+  addId() {
+    this.id = v4();
+  }
 }

@@ -2,6 +2,7 @@ import {
   Between,
   Brackets,
   Equal,
+  //@ts-ignore
   FindConditions,
   FindOperator,
   ILike,
